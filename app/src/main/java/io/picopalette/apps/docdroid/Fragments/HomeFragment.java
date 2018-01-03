@@ -1,5 +1,6 @@
 package io.picopalette.apps.docdroid.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -7,8 +8,12 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import io.picopalette.apps.docdroid.Activities.MedicalResponseActivity;
 import io.picopalette.apps.docdroid.R;
 
 /**
@@ -19,6 +24,8 @@ public class HomeFragment extends Fragment {
 
     private LinearLayout heartpainLayout;
     private LinearLayout accidentLayout;
+
+    public static final String mEmergencyReason = "Emergency Reason";
 
     public static HomeFragment newInstance() {
         return new HomeFragment();
@@ -40,9 +47,28 @@ public class HomeFragment extends Fragment {
             public boolean onLongClick(View view) {
                 AlertDialog.Builder mB = new AlertDialog.Builder(getContext());
                 View alertView = inflater.inflate(R.layout.dialog_heartpain,null);
+                Button yesToAmb = alertView.findViewById(R.id.getMeAmbForHeart);
+                TextView yesToAmbForElse = alertView.findViewById(R.id.getAmbForElseHeart);
                 mB.setView(alertView);
                 final AlertDialog dialog = mB.create();
                 dialog.show();
+                yesToAmb.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(getContext(),"Message Sent...Medical Assistance will be initiated",Toast.LENGTH_LONG).show();
+                        dialog.dismiss();
+                    }
+                });
+
+                yesToAmbForElse.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getContext(), MedicalResponseActivity.class);
+                        intent.putExtra(mEmergencyReason,"Heart-Pain");
+                        startActivity(intent);
+                        dialog.dismiss();
+                    }
+                });
                 return true;
             }
         });
@@ -51,9 +77,19 @@ public class HomeFragment extends Fragment {
             public boolean onLongClick(View view) {
                 AlertDialog.Builder mB = new AlertDialog.Builder(getContext());
                 View alertView = inflater.inflate(R.layout.dialog_accident,null);
+                Button getAmb = alertView.findViewById(R.id.getAmbForAccident);
                 mB.setView(alertView);
                 final AlertDialog dialog = mB.create();
                 dialog.show();
+                getAmb.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getContext(), MedicalResponseActivity.class);
+                        intent.putExtra(mEmergencyReason,"Accident");
+                        startActivity(intent);
+                        dialog.dismiss();
+                    }
+                });
                 return true;
             }
         });

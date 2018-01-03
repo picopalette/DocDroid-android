@@ -18,7 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.NotificationActivity"></activity>
+        <activity android:name=".Activities.NotificationActivity" />
+        <activity android:name=".Activities.MedicalResponseActivity" />
+        <activity android:name=".Activities.EmergencyDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

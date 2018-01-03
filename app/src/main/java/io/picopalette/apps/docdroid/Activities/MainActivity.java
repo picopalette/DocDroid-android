@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.navigation_notification) {
-            Intent intent = new Intent(this,NotificationActivity.class);
+            Intent intent = new Intent(this,EmergencyDetailsActivity.class);
             startActivity(intent);
         }
         return true;
