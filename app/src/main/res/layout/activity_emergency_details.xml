@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context="io.picopalette.apps.docdroid.Activities.EmergencyDetailsActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -31,7 +32,7 @@
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
-                app:title="Emergency"
+                app:title="Victim's Name"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
@@ -42,5 +43,8 @@
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_emergency_details" />
+
 
 </android.support.design.widget.CoordinatorLayout>

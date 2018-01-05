@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="io.picopalette.apps.docdroid.Activities.EmergencyDetailsActivity"
+    tools:showIn="@layout/activity_emergency_details">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_margin="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="8dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="3dp"
+                app:cardBackgroundColor="@color/colorPrimary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_margin="15dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_electrocardiogram_inside_heart"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="21sp"
+                        android:gravity="center_vertical"
+                        android:text="Heart-pain"/>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:textStyle="italic"
+            android:textColor="@color/colorPrimary"/>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="4dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <android.support.v7.widget.CardView
+                                    android:layout_marginTop="7dp"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="-35dp"
+                                    android:layout_height="55dp"
+                                    app:cardCornerRadius="24dp"
+                                    app:cardBackgroundColor="@color/colorAccent">
+
+                                    <android.support.v7.widget.AppCompatImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="10dp"
+                                        android:layout_marginLeft="30dp"
+                                        app:srcCompat="@drawable/ic_maps_and_flags"/>
+
+                                </android.support.v7.widget.CardView>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.6"
+                                    android:layout_height="0dp"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_marginTop="16dp"
+                                android:padding="6dp"
+                                android:textSize="15sp"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/colorAccent"
+                                android:text="Location details are to be displayed here..."/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="4dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.6"
+                                    android:layout_height="0dp"/>
+
+                                <android.support.v7.widget.CardView
+                                    android:layout_marginTop="7dp"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginRight="-35dp"
+                                    android:layout_height="55dp"
+                                    app:cardCornerRadius="24dp"
+                                    app:cardBackgroundColor="@color/colorAccent">
+
+                                    <android.support.v7.widget.AppCompatImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="10dp"
+                                        android:layout_marginRight="30dp"
+                                        app:srcCompat="@drawable/ic_wall_clock"/>
+
+                                </android.support.v7.widget.CardView>
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_marginTop="23dp"
+                                android:padding="3dp"
+                                android:textSize="18sp"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:text="3:30 p.m."/>
+
+                            <TextView
+                                android:layout_marginTop="3dp"
+                                android:padding="3dp"
+                                android:textSize="18sp"
+                                android:textAlignment="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:text="Today"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="-30dp">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="11dp"
+                            android:layout_marginLeft="28dp"
+                            app:srcCompat="@drawable/ic_hospital"/>
+                    </android.support.v7.widget.CardView>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textAlignment="center"
+                            android:text="Hospital Name"
+                            android:textSize="21sp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="1dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textAlignment="center"
+                            android:text="Hospital Address and Contact"
+                            android:textSize="15sp"
+                            android:layout_margin="1dp"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textAlignment="center"
+                            android:text="Ambulance Driver's Name"
+                            android:textSize="21sp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="1dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textAlignment="center"
+                            android:text="Ambulance Details"
+                            android:textSize="15sp"
+                            android:layout_margin="1dp"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="-30dp">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="11dp"
+                            android:layout_marginRight="28dp"
+                            app:srcCompat="@drawable/ic_ambulance_alert"/>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </android.support.v7.widget.CardView>
+
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
