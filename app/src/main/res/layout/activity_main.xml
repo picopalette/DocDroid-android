@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="io.picopalette.apps.docdroid.Activities.MainActivity">
+    tools:context="io.picopalette.apps.docdroid.activities.MainActivity">
 
     <FrameLayout
         android:id="@+id/content"

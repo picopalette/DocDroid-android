@@ -3,4 +3,6 @@
     <string name="title_home">Home</string>
     <string name="title_medical_history">Med-history</string>
     <string name="title_profile">Profile</string>
+    <string name="heart_tile">Heart Pain</string>
+    <string name="accident_tile">Accident</string>
 </resources>

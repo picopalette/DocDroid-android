@@ -1,4 +1,4 @@
-package io.picopalette.apps.docdroid.Activities;
+package io.picopalette.apps.docdroid.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,9 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import io.picopalette.apps.docdroid.Fragments.HomeFragment;
-import io.picopalette.apps.docdroid.Fragments.MedHistoryFragment;
-import io.picopalette.apps.docdroid.Fragments.ProfileFragment;
+import io.picopalette.apps.docdroid.fragments.HomeFragment;
+import io.picopalette.apps.docdroid.fragments.MedHistoryFragment;
+import io.picopalette.apps.docdroid.fragments.ProfileFragment;
 import io.picopalette.apps.docdroid.R;
 
 public class MainActivity extends AppCompatActivity {

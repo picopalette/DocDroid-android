@@ -1,4 +1,4 @@
-package io.picopalette.apps.docdroid.Fragments;
+package io.picopalette.apps.docdroid.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import io.picopalette.apps.docdroid.Activities.MedicalResponseActivity;
+import io.picopalette.apps.docdroid.activities.MedicalResponseActivity;
 import io.picopalette.apps.docdroid.R;
 
 /**

@@ -1,4 +1,4 @@
-package io.picopalette.apps.docdroid.Fragments;
+package io.picopalette.apps.docdroid.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,12 +13,11 @@ import io.picopalette.apps.docdroid.R;
  * Created by Aswin Sundar on 31-12-2017.
  */
 
-public class ProfileFragment extends Fragment {
+public class MedHistoryFragment extends Fragment {
 
-    public static ProfileFragment newInstance() {
-        return new ProfileFragment();
+    public static MedHistoryFragment newInstance() {
+        return new MedHistoryFragment();
     }
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +26,7 @@ public class ProfileFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_profile,container,false);
+        View view = inflater.inflate(R.layout.fragment_med_history,container,false);
         return view;
     }
 }
