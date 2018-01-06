@@ -47,7 +47,8 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".activities.ConfirmEmergencyActivity"></activity>
+        <activity android:name=".activities.ConfirmEmergencyActivity" />
+        <activity android:name=".activities.BystanderAccidentActivity"></activity>
     </application>
 
 </manifest>
