@@ -42,6 +42,7 @@
                     app:civ_border_color="@color/colorAccent"/>
             </LinearLayout>
             <TextView
+                android:id="@+id/profileName"
                 android:layout_width="0dp"
                 android:textColor="@color/colorAccent"
                 android:layout_weight="1.3"
@@ -90,7 +91,7 @@
 
                     <TextView
                         android:gravity="center_vertical"
-                        android:id="@+id/eventDate"
+                        android:id="@+id/profileNumber"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="0.8"
@@ -123,7 +124,7 @@
                         app:srcCompat="@drawable/ic_big_blood_drop" />
 
                     <TextView
-                        android:id="@+id/eventTime"
+                        android:id="@+id/profileBlood"
                         android:gravity="center_vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -177,6 +178,7 @@
         android:layout_height="43dp">
 
         <CheckedTextView
+            android:id="@+id/profileDonate"
             android:textSize="15sp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
@@ -224,6 +226,7 @@
             app:cardCornerRadius="12dp">
 
             <TextView
+                android:id="@+id/profileAddress"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Here goes the address"
@@ -263,6 +266,7 @@
                     android:textSize="17sp"
                     />
                 <TextView
+                    android:id="@+id/profileAadhar"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
@@ -311,6 +315,7 @@
                 app:cardCornerRadius="12dp">
 
                 <TextView
+                    android:id="@+id/profileIssues"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Issues"
