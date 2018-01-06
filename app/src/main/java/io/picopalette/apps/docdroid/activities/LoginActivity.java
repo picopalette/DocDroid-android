@@ -22,7 +22,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import io.picopalette.apps.docdroid.R;
-import io.picopalette.apps.docdroid.helpers.NetworkHelper;
+import io.picopalette.apps.docdroid.helpers.VolleySingleton;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        queue = NetworkHelper.getInstance(this).getRequestQueue();
+        queue = VolleySingleton.getInstance(this).getRequestQueue();
 
         mUsernameET = (EditText) findViewById(R.id.usernameEditText);
         mPasswordET = (EditText) findViewById(R.id.passwordEditText);

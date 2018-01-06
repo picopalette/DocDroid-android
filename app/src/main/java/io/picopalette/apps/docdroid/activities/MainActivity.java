@@ -72,10 +72,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        sharedPreferences = getSharedPreferences("MyPref",0);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("url","https://172.16.8.42:5000/");
-        editor.commit();
 
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);

@@ -24,9 +24,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.net.CookieHandler;
+import java.net.CookieManager;
+import java.net.CookiePolicy;
+
 
 import io.picopalette.apps.docdroid.R;
-import io.picopalette.apps.docdroid.helpers.NetworkHelper;
+import io.picopalette.apps.docdroid.helpers.PersistentCookieStore;
+import io.picopalette.apps.docdroid.helpers.VolleySingleton;
 
 public class ConfigureActivity extends AppCompatActivity {
 
@@ -42,7 +47,11 @@ public class ConfigureActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configure);
-        queue = NetworkHelper.getInstance(this).getRequestQueue();
+
+        CookieManager cookieManager = new CookieManager(new PersistentCookieStore(getApplicationContext()), CookiePolicy.ACCEPT_ORIGINAL_SERVER);
+        CookieHandler.setDefault(cookieManager);
+
+        queue = VolleySingleton.getInstance(this).getRequestQueue();
         mSharedPreferences = getSharedPreferences("MyPref", Context.MODE_PRIVATE);
         proceed();
         send = (ImageView) findViewById(R.id.sendImage);

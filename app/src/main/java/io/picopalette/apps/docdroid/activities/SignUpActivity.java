@@ -1,6 +1,7 @@
 package io.picopalette.apps.docdroid.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,7 +19,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import io.picopalette.apps.docdroid.R;
-import io.picopalette.apps.docdroid.helpers.NetworkHelper;
+import io.picopalette.apps.docdroid.helpers.VolleySingleton;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -30,7 +31,6 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
         final EditText nameEditText = (EditText) findViewById(R.id.nameSignupEditText);
-        final EditText emailEditText = (EditText) findViewById(R.id.emailSignupEditText);
         final EditText phoneEditText = (EditText) findViewById(R.id.phoneSignupEditText);
         final EditText addressEditText = (EditText) findViewById(R.id.addressSignupEditText);
         final EditText passwordEditText = (EditText) findViewById(R.id.passwordSignupEditText);
@@ -44,7 +44,6 @@ public class SignUpActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 String name = nameEditText.getText().toString();
-                String email = emailEditText.getText().toString();
                 String phone = phoneEditText.getText().toString();
                 String address = addressEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
@@ -69,6 +68,8 @@ public class SignUpActivity extends AppCompatActivity {
                         try {
                             JSONObject userObject = response;
                             Toast.makeText(getApplicationContext(), "Welcome " + userObject.getString("name"), Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                            startActivity(intent);
                             finish();
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -81,7 +82,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                     }
                 });
-                NetworkHelper.getInstance(SignUpActivity.this).getRequestQueue().add(loginRequest);
+                VolleySingleton.getInstance(SignUpActivity.this).getRequestQueue().add(loginRequest);
             }
         });
 

@@ -19,7 +19,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import io.picopalette.apps.docdroid.R;
-import io.picopalette.apps.docdroid.helpers.NetworkHelper;
+import io.picopalette.apps.docdroid.helpers.VolleySingleton;
 
 public class ProfileEditActivity extends AppCompatActivity {
 
@@ -38,6 +38,19 @@ public class ProfileEditActivity extends AppCompatActivity {
         mMedicalIssues = findViewById(R.id.medicalIssuesSignupEditText);
         mProfileSet = findViewById(R.id.setProfileButton);
         mDonateBlood = findViewById(R.id.donateBlood);
+
+        mDonateBlood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mDonateBlood.isChecked()) {
+                    mDonateBlood.setChecked(false);
+                    mDonateBlood.setCheckMarkDrawable(R.drawable.ic_uncheck_mark_button);
+                } else {
+                    mDonateBlood.setChecked(true);
+                    mDonateBlood.setCheckMarkDrawable(R.drawable.ic_check_mark_button);
+                }
+            }
+        });
 
         mProfileSet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +78,7 @@ public class ProfileEditActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONObject userObject = response;
-                            Toast.makeText(getApplicationContext(), "Welcome " + userObject.getString("name"), Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), userObject.getString("saved"), Toast.LENGTH_LONG).show();
                             finish();
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -78,7 +91,7 @@ public class ProfileEditActivity extends AppCompatActivity {
 
                     }
                 });
-                NetworkHelper.getInstance(getApplicationContext()).getRequestQueue().add(loginRequest);
+                VolleySingleton.getInstance(getApplicationContext()).getRequestQueue().add(loginRequest);
             }
         });
 

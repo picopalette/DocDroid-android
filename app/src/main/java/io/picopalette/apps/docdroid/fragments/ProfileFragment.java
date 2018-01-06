@@ -11,18 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckedTextView;
 import android.widget.TextView;
-
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import io.picopalette.apps.docdroid.R;
-import io.picopalette.apps.docdroid.activities.SignUpActivity;
-import io.picopalette.apps.docdroid.helpers.NetworkHelper;
+import io.picopalette.apps.docdroid.helpers.VolleySingleton;
 
 /**
  * Created by Aswin Sundar on 31-12-2017.
@@ -82,7 +78,7 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        NetworkHelper.getInstance(getActivity()).getRequestQueue().add(profileRequest);
+        VolleySingleton.getInstance(getActivity()).getRequestQueue().add(profileRequest);
         return view;
     }
 }
