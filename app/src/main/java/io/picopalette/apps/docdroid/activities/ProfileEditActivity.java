@@ -23,7 +23,7 @@ import io.picopalette.apps.docdroid.helpers.NetworkHelper;
 
 public class ProfileEditActivity extends AppCompatActivity {
 
-    private EditText mBlood;
+
     private EditText mAadhar;
     private EditText mMedicalIssues;
     private Button mProfileSet;
@@ -34,7 +34,6 @@ public class ProfileEditActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile_edit);
 
         final SharedPreferences sharedPreferences = getSharedPreferences("MyPref", Context.MODE_PRIVATE);
-        mBlood = findViewById(R.id.bloodGroupEditText);
         mAadhar = findViewById(R.id.aadharEditText);
         mMedicalIssues = findViewById(R.id.medicalIssuesSignupEditText);
         mProfileSet = findViewById(R.id.setProfileButton);
@@ -43,7 +42,7 @@ public class ProfileEditActivity extends AppCompatActivity {
         mProfileSet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String bloodGroup = mBlood.getText().toString();
+
                 String aadhar = mAadhar.getText().toString();
                 String issues = mMedicalIssues.getText().toString();
                 Boolean donate = mDonateBlood.isChecked();
@@ -51,7 +50,6 @@ public class ProfileEditActivity extends AppCompatActivity {
                 JSONObject signUpData = new JSONObject();
                 try {
 
-                    signUpData.put("blood_group", bloodGroup);
                     signUpData.put("aadhar", aadhar);
                     signUpData.put("issues", issues);
                     signUpData.put("blood_donate",donate);
@@ -60,7 +58,7 @@ public class ProfileEditActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                String url = sharedPreferences.getString("url", "") + "/api/signUpUser";
+                String url = sharedPreferences.getString("url", "") + "/api/updateUserProfile";
 
                 JsonObjectRequest loginRequest = new JsonObjectRequest(Request.Method.POST, url, signUpData, new Response.Listener<JSONObject>() {
                     @Override

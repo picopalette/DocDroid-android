@@ -22,6 +22,8 @@ import io.picopalette.apps.docdroid.helpers.NetworkHelper;
 
 public class SignUpActivity extends AppCompatActivity {
 
+    private EditText mBlood;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,7 @@ public class SignUpActivity extends AppCompatActivity {
         final EditText passwordEditText = (EditText) findViewById(R.id.passwordSignupEditText);
         Button signUpButton = (Button) findViewById(R.id.signUpButton);
 
+        mBlood = findViewById(R.id.bloodGroupEditText);
         final SharedPreferences sharedPreferences = getSharedPreferences("MyPref", Context.MODE_PRIVATE);
 
         signUpButton.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +48,7 @@ public class SignUpActivity extends AppCompatActivity {
                 String phone = phoneEditText.getText().toString();
                 String address = addressEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
+                String bloodGroup = mBlood.getText().toString();
 
                 JSONObject signUpData = new JSONObject();
                 try {
@@ -52,6 +56,7 @@ public class SignUpActivity extends AppCompatActivity {
                     signUpData.put("phone", phone);
                     signUpData.put("address", address);
                     signUpData.put("password", password);
+                    signUpData.put("blood_group", bloodGroup);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
