@@ -1,6 +1,7 @@
 package io.picopalette.apps.docdroid.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -16,6 +17,12 @@ import io.picopalette.apps.docdroid.fragments.ProfileFragment;
 import io.picopalette.apps.docdroid.R;
 
 public class MainActivity extends AppCompatActivity {
+
+
+
+    private SharedPreferences sharedPreferences;
+
+
 
     private boolean isInHome = true;
     private BottomNavigationView navigation;
@@ -65,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sharedPreferences = getSharedPreferences("MyPref",0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("url","https://172.16.8.42:5000/");
+        editor.commit();
 
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
