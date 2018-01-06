@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/currentIPCard"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="3dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Current IP"
+                android:layout_marginTop="6dp"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="3dp">
+
+            <TextView
+                android:id="@+id/ipTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="No IP set"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp"
+                android:gravity="center"/>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="45dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="14dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="20dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            app:cardCornerRadius="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/ipEditText"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:hint="Set a New IP...."/>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/sendImage"
+                    android:layout_width="0dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.2"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_send_black_24dp"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

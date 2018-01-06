@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="io.picopalette.apps.docdroid.activities.ProfileEditActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="-30dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="22dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:text="Manage Profile"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/colorAccent"/>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#efefef">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/bloodGroupEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="Blood Group"
+                android:textSize="17sp" />
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="#efefef">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/aadharEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:inputType="number"
+                android:layout_marginRight="5dp"
+                android:hint="Aadhar Number"
+                android:textSize="17sp"/>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="#efefef">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/medicalIssuesSignupEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="5dp"
+                android:inputType="textMultiLine"
+                android:hint="Medical Issues"
+                android:textSize="17sp"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="#efefef">
+
+            <CheckedTextView
+                android:id="@+id/donateBlood"
+                android:textSize="15sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="#777"
+                android:text="I am willing to donate my blood"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:checkMark="@drawable/ic_uncheck_mark_button" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <Button
+        android:id="@+id/setProfileButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:text="set"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:background="@color/colorPrimary"/>
+</RelativeLayout>
