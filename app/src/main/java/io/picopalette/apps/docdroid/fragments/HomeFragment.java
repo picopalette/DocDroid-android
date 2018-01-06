@@ -59,6 +59,10 @@ public class HomeFragment extends Fragment {
     private ArrayList<String> mycontacts;
     private ProgressDialog progressDialog;
     private SharedPreferences sharedPreferences;
+    private LinearLayout mCompleteProfile;
+    private LinearLayout mAddEmergencyContacts;
+    private LinearLayout mEnrollBloodDonation;
+    private LinearLayout mStartHelpingOthers;
 
     public static final String mEmergencyReason = "Emergency Reason";
 
@@ -79,6 +83,11 @@ public class HomeFragment extends Fragment {
         heartpainLayout = view.findViewById(R.id.reportHeartPainLayout);
         emergencyContacts = view.findViewById(R.id.emergencyContacts);
         accidentLayout = view.findViewById(R.id.reportAccidentLayout);
+        mCompleteProfile = view.findViewById(R.id.completeProfileHF);
+        mAddEmergencyContacts = view.findViewById(R.id.addEmergencyContactsHF);
+        mEnrollBloodDonation = view.findViewById(R.id.bloodDonationEnrollHF);
+        mStartHelpingOthers = view.findViewById(R.id.startHelpingOthersHF);
+
         progressDialog = new ProgressDialog(getContext());
         progressDialog.setMessage("Loading...");
 

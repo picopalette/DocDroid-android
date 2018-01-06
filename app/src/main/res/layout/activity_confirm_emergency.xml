@@ -35,6 +35,7 @@
             app:cardCornerRadius="75dp">
 
             <android.support.v7.widget.CardView
+                android:id="@+id/emergencyYES"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
