@@ -286,13 +286,14 @@ public class HomeFragment extends Fragment {
                 JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Method.POST, sosSelfUrl, data, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        Toast.makeText(getActivity(), "Ambulance arriving", Toast.LENGTH_SHORT).show();
+                        Log.d("res", response.toString());
+                        Toast.makeText(getActivity(), "Ambulance arriving", Toast.LENGTH_LONG).show();
                         Log.d("hospital", response.toString());
                     }
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        Toast.makeText(getActivity(), "Ambulance arriving", Toast.LENGTH_LONG).show();
                     }
                 });
                 VolleySingleton.getInstance(getActivity()).getRequestQueue().add(jsonObjectRequest);
