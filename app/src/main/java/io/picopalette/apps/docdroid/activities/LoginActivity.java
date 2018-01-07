@@ -3,7 +3,9 @@ package io.picopalette.apps.docdroid.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +19,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -65,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                 url = mSharedPreferences.getString("url", "") + "/api/loginUser";
 
                 JsonObjectRequest loginRequest = new JsonObjectRequest(Request.Method.POST, url, loginData, new Response.Listener<JSONObject>() {
+                    @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
                     @Override
                     public void onResponse(JSONObject response) {
                         mEditor.putString("phone", user);

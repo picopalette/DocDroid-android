@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/DocDroid-android.iml" filepath="$PROJECT_DIR$/DocDroid-android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/docdroid.iml" filepath="$PROJECT_DIR$/docdroid.iml" />
+      <module fileurl="file://C:\Users\holmesvinn\AndroidStudioProjects\DocDroid-android\docdroid.iml" filepath="C:\Users\holmesvinn\AndroidStudioProjects\DocDroid-android\docdroid.iml" />
     </modules>
   </component>
 </project>
