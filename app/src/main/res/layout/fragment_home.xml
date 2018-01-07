@@ -110,7 +110,6 @@
     </android.support.v7.widget.CardView>
 
     <LinearLayout
-        android:id="@+id/completeProfileHF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -141,7 +140,6 @@
         android:layout_marginBottom="3dp"
         />
     <LinearLayout
-        android:id="@+id/addEmergencyContactsHF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -171,7 +169,6 @@
         android:layout_marginBottom="3dp"
         />
     <LinearLayout
-        android:id="@+id/bloodDonationEnrollHF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -202,7 +199,6 @@
         android:layout_marginBottom="3dp"
         />
     <LinearLayout
-        android:id="@+id/startHelpingOthersHF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
