@@ -39,6 +39,7 @@
                         android:layout_height="match_parent">
 
                         <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/emerDetails_ProblemImg"
                             android:layout_margin="15dp"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
@@ -48,6 +49,7 @@
                     </RelativeLayout>
 
                     <TextView
+                        android:id="@+id/emerDetails_ProblemText"
                         android:layout_width="0dp"
                         android:layout_weight="1.2"
                         android:layout_height="match_parent"
@@ -62,6 +64,7 @@
         </android.support.v7.widget.CardView>
 
         <TextView
+            android:id="@+id/emerDetails_ProblemStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Status"
@@ -132,6 +135,7 @@
                             </LinearLayout>
 
                             <TextView
+                                android:id="@+id/emerDetails_Location"
                                 android:layout_marginTop="16dp"
                                 android:padding="6dp"
                                 android:textSize="15sp"
@@ -193,6 +197,7 @@
                             </LinearLayout>
 
                             <TextView
+                                android:id="@+id/emerDetails_Time"
                                 android:layout_marginTop="23dp"
                                 android:padding="3dp"
                                 android:textSize="18sp"
@@ -203,6 +208,7 @@
                                 android:text="3:30 p.m."/>
 
                             <TextView
+                                android:id="@+id/emerDetails_Date"
                                 android:layout_marginTop="3dp"
                                 android:padding="3dp"
                                 android:textSize="18sp"
@@ -259,6 +265,7 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical">
                         <TextView
+                            android:id="@+id/emerDetails_hospiName"
                             android:layout_width="match_parent"
                             android:textAlignment="center"
                             android:text="Hospital Name"
@@ -269,6 +276,7 @@
                             android:layout_height="wrap_content" />
 
                         <TextView
+                            android:id="@+id/emerDetails_hospidetails"
                             android:layout_width="match_parent"
                             android:textAlignment="center"
                             android:text="Hospital Address and Contact"
@@ -308,6 +316,7 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical">
                         <TextView
+                            android:id="@+id/emerDetails_DriverName"
                             android:layout_width="match_parent"
                             android:textAlignment="center"
                             android:text="Ambulance Driver's Name"
@@ -318,6 +327,7 @@
                             android:layout_height="wrap_content" />
 
                         <TextView
+                            android:id="@+id/emerDetails_AmbulanceDetails"
                             android:layout_width="match_parent"
                             android:textAlignment="center"
                             android:text="Ambulance Details"
